@@ -82,11 +82,7 @@ void load_video(void) {
 	// Backgrounds
 
 	memcpy32(&tile_mem[BACKGROUND_CB_NUM][0], backgroundTiles, backgroundTilesLen/4);
-	pal_bg_mem[0] = CLR_RED;
-	pal_bg_mem[1] = CLR_BLACK;
-	pal_bg_mem[2] = CLR_MONEYGREEN; //RGB8(0xd4, 0xe3, 0xc8); //CLR_MONEYGREEN;
-	pal_bg_mem[3] = CLR_MONEYGREEN;
-	pal_bg_mem[4] = CLR_YELLOW;
+	memcpy32(pal_bg_mem, backgroundPal, backgroundPalLen/4);
 
 	for(int y=0; y<20; y++) {
 		for(int x=0; x<30; x++) {
