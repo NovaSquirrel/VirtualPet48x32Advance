@@ -27,7 +27,7 @@ LIBTONC := $(DEVKITPRO)/libtonc
 #---------------------------------------------------------------------------------
 TARGET		:= $(notdir $(CURDIR))
 BUILD		:= build
-SOURCES		:= source
+SOURCES		:= source VirtualPet48x32\src
 INCLUDES	:= include
 DATA		:=
 MUSIC		:=
@@ -40,6 +40,7 @@ ARCH	:=	-mthumb -mthumb-interwork
 
 CFLAGS	:=	-g -Wall -O2\
 		-mcpu=arm7tdmi -mtune=arm7tdmi\
+		-DPLATFORM_GBA\
 		$(ARCH)
 
 CFLAGS	+=	$(INCLUDE)
